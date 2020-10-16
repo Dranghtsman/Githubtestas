@@ -1,0 +1,246 @@
+
+xCreate a function that inserts another int at ANY specified position in array
+xCreate a function that inserts another int at the start of array
+xCreate a function that inserts another int at the end of array
+Create a function that removes element at ANY specified position
+xCreate a function that removes first element of an array
+xCreate a function that removes last element of array
+(edited)
+
+new implement
+--------------------------
+insert first element
+-------------------------------
+public class ArrEnd {
+
+
+    public static void main(String[] args) {
+
+        int[] numbers = {9, 10, 11, 12, 13};
+
+        name2(numbers, 5, 0);
+
+    }
+
+    public static int[] name2(int[] numbers, int numbers2, int index) {
+
+        int[] numbers3 = new int[numbers.length + 1];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers3[i+1]=numbers[i];
+ 
+            numbers3[index]= numbers2;
+
+
+        }
+for(int j=0;j< numbers3.length;j++)
+            System.out.println(numbers3[j]);
+        return numbers3;
+    }}
+
+-----------------------------
+remove first number
+--------------------------------
+public class ArrEnd {
+
+
+    public static void main(String[] args) {
+
+        int[] numbers = {9, 10, 11, 12, 13};
+
+        name2(numbers,0);
+
+
+
+    }
+
+    public static int[] name2(int[] numbers,int index) {
+
+
+        int[] numbers2 = new int[numbers.length ];
+
+        for (int i = 1; i < numbers.length; i++){
+        index=index+1;
+            numbers2[i] =numbers[index];
+
+
+        System.out.println(numbers2[i]);
+    }   return numbers2;
+
+    }}
+
+
+------------------------------------------------
+remove last element
+-----------------------------------------------
+public class ArrEnd {
+    public static void main(String[] args) {
+        int[] numbers = {9, 10, 11, 12, 13};
+        name2(numbers);
+    }
+    public static int[] name2(int[] numbers) {
+        int[] numbers2 = new int[numbers.length - 1];
+    for (int i = 0; i < numbers2.length; i++) {
+        numbers2[i] = numbers[i];
+    System.out.println(numbers2[i]);
+}   return numbers2;
+}}
+----------------------------------------------------------
+insert any number
+--------------------------------------------------------
+public class ArrEnd {
+
+
+        public static void main(String[] args) {
+
+            int[] numbers = {9, 10, 11, 12, 13};
+
+            name2(numbers, 5, 3);
+
+        }
+
+        public static int[] name2(int[] numbers, int numbers2, int index) {
+
+
+            int[] numbers3 = new int[numbers.length + 1];
+            {
+
+
+                for (int i = numbers3.length - 1; i > index; i--) {
+                    numbers3[i] = numbers[i - 1];
+                    numbers3[index] = numbers2;
+
+
+                        for (int j =0; j < index; j++) {
+numbers3[j]=numbers[j];
+                        }
+                }
+  for (int j =0; j < numbers3.length; j++)
+            System.out.println(numbers3[j]);
+                return numbers3;
+            }
+
+        }}
+
+-----------------------------------------
+-insert element copy of------------------
+import java.util.Arrays;
+
+
+public class find {
+
+
+    public static void main(String[] args) {
+
+        int[] numbers = {9, 10, 11, 12, 13};
+
+        name2(numbers, 5, 2);
+
+    }
+
+    public static int[] name2(int[] numbers, int numbers2, int index) {
+
+
+        numbers = Arrays.copyOf(numbers, numbers.length+1);
+        {
+
+
+            for (int i = numbers.length - 1; i > index; i--)//insert number
+                numbers[i] = numbers[i - 1];
+            numbers[index] = numbers2;
+
+        }
+
+        return numbers;
+    }
+
+}
+
+.....................................................
+import java.util.Arrays;
+
+public class arrstart{
+
+
+    public static void main(String[] args) {
+
+        int[] numbers = {9, 10, 11, 12, 13};
+
+        name2(numbers, 5, 0);
+
+    }
+
+    public static int[] name2(int[] numbers, int numbers2, int index) {
+
+        numbers[index] = numbers2;
+        return numbers;
+    }
+
+}
+
+end - 
+......................................
+import java.util.Arrays;
+
+public class ArrEnd {
+
+
+
+
+        public static void main(String[] args) {
+
+            int[] numbers = {9, 10, 11, 12, 13};
+
+            name2(numbers);
+
+        }
+
+        public static int[] name2(int[] numbers ) {
+
+
+            numbers = Arrays.copyOf(numbers, numbers.length-1);
+            {
+
+
+
+                return numbers;
+            }}}
+..........................................................................
+import java.util.Arrays;
+
+public class ArrEnd {
+
+
+    public static void main(String[] args) {
+
+        int[] numbers = {9, 10, 11, 12, 13};
+
+        name2(numbers, 5);
+
+
+    }
+
+    public static int[] name2(int[] numbers, int numbers2) {
+
+        int index=numbers.length-1;
+        numbers = Arrays.copyOf(numbers, numbers.length);
+        {
+
+
+            for (int i = numbers.length -1 ; i > index; i--)//insert number
+                numbers[i] = numbers[i - 1];
+            numbers[index] = numbers2;
+
+        }
+
+        return numbers;
+    }
+
+}
+
+
+
+
+
+
+
+
